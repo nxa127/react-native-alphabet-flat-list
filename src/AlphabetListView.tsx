@@ -108,6 +108,7 @@ class AlphabetListView extends PureComponent<IProps, State> {
           zIndex: 10,
           display: "flex",
           justifyContent: "center",
+          height: contentHeight,
         }}
         {...this.responder.panHandlers}
       >

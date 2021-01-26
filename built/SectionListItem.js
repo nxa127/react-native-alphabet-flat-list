@@ -4,7 +4,7 @@ const React = require("react");
 const react_native_1 = require("react-native");
 const styles_1 = require("./styles");
 const SectionListItem = function (props) {
-    return (<react_native_1.View style={[styles_1.default.sectionListItemContainer]}>
+    return (<react_native_1.View style={[styles_1.default.sectionListItemContainer, { height: props.height }]}>
       <react_native_1.View style={[
         styles_1.default.sectionListItemWrapper,
         {

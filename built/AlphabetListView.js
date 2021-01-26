@@ -65,6 +65,7 @@ class AlphabetListView extends react_1.PureComponent {
             zIndex: 10,
             display: "flex",
             justifyContent: "center",
+            height: contentHeight,
         }} {...this.responder.panHandlers}>
         {titles.map((title) => (<SectionListItem_1.default key={title} height={itemHeight} title={title} active={selectAlphabet === title}/>))}
       </react_native_1.View>);

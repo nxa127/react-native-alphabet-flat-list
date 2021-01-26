@@ -23,7 +23,6 @@ export default StyleSheet.create({
   },
   sectionListItemContainer: {
     width: 25,
-    height: 25,
     justifyContent: 'center',
     alignItems: 'center'
   },

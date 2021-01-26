@@ -18,7 +18,7 @@ interface IProps {
 
 const SectionListItem: FC<IProps> = function (props) {
   return (
-    <View style={[styles.sectionListItemContainer]}>
+    <View style={[styles.sectionListItemContainer, { height: props.height }]}>
       <View
         style={[
           styles.sectionListItemWrapper,
