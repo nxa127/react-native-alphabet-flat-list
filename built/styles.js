@@ -28,7 +28,7 @@ exports.default = react_native_1.StyleSheet.create({
         alignItems: 'center'
     },
     sectionListItemText: {
-        fontSize: 8,
+        fontSize: 12,
         textAlign: 'center',
         fontFamily: 'PingFangSC-Regular'
     }

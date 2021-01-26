@@ -6,8 +6,8 @@ const react_native_1 = require("react-native");
 const SectionListItem_1 = require("./SectionListItem");
 const Toast_1 = require("./Toast");
 const initState = {
-    selectAlphabet: '',
-    itemHeight: 0
+    selectAlphabet: "",
+    itemHeight: 0,
 };
 class AlphabetListView extends react_1.PureComponent {
     constructor(props) {
@@ -16,7 +16,7 @@ class AlphabetListView extends react_1.PureComponent {
             const itemHeight = this.props.contentHeight / this.props.titles.length;
             const event = e.nativeEvent || {};
             const index = Math.floor((event.pageY - this.props.pageY) / itemHeight);
-            if (index >= 0 && index <= (this.props.titles.length - 1)) {
+            if (index >= 0 && index <= this.props.titles.length - 1) {
                 this.props.onSelect && this.props.onSelect(index);
                 this.updateSelectAlphabet(this.props.titles[index]);
                 if (this.props.alphabetToast) {
@@ -30,8 +30,8 @@ class AlphabetListView extends react_1.PureComponent {
             onStartShouldSetPanResponderCapture: () => true,
             onStartShouldSetPanResponder: () => true,
             onPanResponderTerminationRequest: () => true,
-            onPanResponderGrant: (this.onTouchChange),
-            onPanResponderMove: (this.onTouchChange),
+            onPanResponderGrant: this.onTouchChange,
+            onPanResponderMove: this.onTouchChange,
         });
         this.state = initState;
     }
@@ -49,7 +49,7 @@ class AlphabetListView extends react_1.PureComponent {
     initData({ titles, contentHeight }) {
         this.setState({
             selectAlphabet: titles[0],
-            itemHeight: contentHeight / titles.length
+            itemHeight: contentHeight / titles.length,
         });
     }
     render() {
@@ -59,11 +59,12 @@ class AlphabetListView extends react_1.PureComponent {
         }
         const { topPosition, contentHeight, titles } = this.props;
         return (<react_native_1.View style={{
-            position: 'absolute',
+            position: "absolute",
             top: topPosition,
             right: 5,
             zIndex: 10,
-            height: contentHeight
+            display: "flex",
+            justifyContent: "center",
         }} {...this.responder.panHandlers}>
         {titles.map((title) => (<SectionListItem_1.default key={title} height={itemHeight} title={title} active={selectAlphabet === title}/>))}
       </react_native_1.View>);
