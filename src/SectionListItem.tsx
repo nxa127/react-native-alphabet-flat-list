@@ -5,9 +5,9 @@
  * Time: 下午9:25
  * Desc:
  */
-import * as React from 'react'
-import { FC } from 'react';
-import {View, Text} from "react-native";
+import * as React from "react";
+import { FC } from "react";
+import { View, Text } from "react-native";
 import styles from "./styles";
 
 interface IProps {
@@ -18,16 +18,22 @@ interface IProps {
 
 const SectionListItem: FC<IProps> = function (props) {
   return (
-    <View style={[styles.sectionListItemContainer, {height: props.height}]}>
+    <View style={[styles.sectionListItemContainer]}>
       <View
-        style={[styles.sectionListItemWrapper, {
-          backgroundColor: props.active ? '#0ea8ff' : 'transparent',
-        }]}
+        style={[
+          styles.sectionListItemWrapper,
+          {
+            backgroundColor: "transparent",
+          },
+        ]}
       >
         <Text
-          style={[styles.sectionListItemText, {
-            color: props.active ? 'white' : '#333',
-          }]}
+          style={[
+            styles.sectionListItemText,
+            {
+              color: props.active ? "#cccccc" : "#999999",
+            },
+          ]}
         >
           {props.title}
         </Text>
